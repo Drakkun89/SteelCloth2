@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<title>SteelCloth</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style/styles.css">
+<link href='https://fonts.googleapis.com/css?family=Special%20Elite' rel='stylesheet'>
+</head>
+<body>
+
+<!--heading-->
+
+<h1>SteelCloth</h1>
+<h3>Wear History</h3>
+
+<!--topnav-->
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#catalogo%20uniformi">Catalogo Uniformi</a>
+  <a href="#curatori">Curatori</a>
+
+</div>
+
+<!--Main Body-->
+
+<p>Benvenuto su SteelCloth, utile risorsa per qualsiasi rievocatore della Seconda Guerra Mondiale! La Rievocazione è una passione meravigliosa, capace di infiammare i cuori degli
+appassionati e affascinare gli occhi dei curiosi. Entrare a far parte della schiera dei rievocatori è però spesso difficile, a causa della complicatezza nel reperire le giuste
+informazioni per comporre un'uniforme: tramite SteelCloth potrai ottenere tutti i dati necessari per pianificare la creazione della tua uniforme, consultando le fonti e con la 
+possibilità di interagire con curatori preparati e pronti a guidarti verso la tua entrata nell'Hobby! I cataloghi forniscono dati per larga parte degli eserciti protagonisti
+del Secondo Conflitto, coprendo più teatri e tutte le stagioni climatiche. Basterà infatti inserire i dati d'interesse nel menù di ricerca per ottenere l'uniforme desiderata, 
+con i commenti e le descrizioni del caso. E' anche possibile scegliere tra le battaglie più importanti della guerra, che hanno quindi visto leggere variazioni sia nelle 
+uniformi che negli equipaggiamenti utilizzati: la sezione Grandi Battaglie presenta infatti la possibilità di ottenere i dati sulle uniformi e gli equipaggiamenti usati dalle
+fazioni coinvolte. Viaggia per i campi della Storia, entra a far parte della grande famiglia dei rievocatori!</p>
+
+<!--Battaglie Storiche-->
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/Stalingrad-artwork.jpeg" alt= "un pog ed gat" style="width:100%">
+  <div class="text">La Battaglia di Stalingrado</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/BCN_BHR_R1135-001.jpg" alt= "un pog ed gat" style="width:100%">
+  <div class="text">La Battaglia di Montecassino</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/7118575699_bf8cee3f8c.jpg" alt= "un pog ed gat" style="width:100%">
+  <div class="text">La Battaglia di Okinawa</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
